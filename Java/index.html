@@ -10,6 +10,31 @@
 <style>
 body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 </style>
+<script>
+			function Function1() {
+			var x = document.getElementById("myNumber").value;
+			var text = '{"employees":[' +
+			'{"firstName":"John","lastName":"Doe" },' +
+			'{"firstName":"Anna","lastName":"Smith" },' +
+			'{"firstName":"Peter","lastName":"Jones" }]}';
+
+			obj = JSON.parse(text);
+			document.getElementById("Employ").innerHTML =
+			obj.employees[x-1].firstName + " " + obj.employees[x-1].lastName;
+			}
+			
+			function Function2() 
+			{
+			document.getElementById("Java2").innerHTML = '<div class="w3-card-4 w3-margin w3-white"><div class="w3-container"><div class="w3-container"><h3><b>JavaScript#2</b></h3><h5>Input HTML Element can input something like this too. <span class="w3-opacity"> [Input HTML Element, Display Element, Hide Element, ##Can repeat(change attribute).]</span></span></h5></div><div class="w3-container"><br><button onclick="Function2a()">Hide</button><p>How it work? 1# When you hide it the attribute of context just change to "none" so if you want it to re appear just change it to "block" or something else, <br>Then it can repeat many time as you want. <br>How it work? 2# Input HTML Element just put context in between id-tag, So i just make empty id-tag and put the whole context between it when click the button, not so good method but easy to manage when use external script.</p><p><strong>Note:</strong> You can use same id-tag to input different context.</p><p id="Outputfield1"></p></div>';
+			document.getElementById('Java2').style.display='block';
+			}
+
+			function Function2a()
+			{
+			document.getElementById('Java2').style.display='none';
+			document.getElementById('Button1').innerHTML='Show Script 2 again';
+			}
+		</script>
 <body class="w3-light-grey">
 
 <!-- w3-content defines a container for fixed size centered content, 
@@ -27,45 +52,33 @@ and is wrapped around the whole page content, except for the footer in this exam
   <div class="w3-container">
     <div class="w3-container">
       <h3><b>JavaScript#1</b></h3>
-      <h5>ARRAY ,JSON ARRAY ,Button function ,Input Number, <span class="w3-opacity">12/07/2017</span></h5>
+      <h5>ARRAY, JSON ARRAY, Button function, Dynamic output base on Number, Change HTML Element. <span class="w3-opacity"> (5) </span></h5>
     </div>
 
     <div class="w3-container"><br>
 		<p>ADD Array in JSON Method (John doe, Anna Smith , Peter Jones).</p>
-		<p>Number: <input type="number" id="myNumber" value="1">
+		<p>Number: <input type="number" id="myNumber" value="1"><span class="w3-opacity">1 , 2 , 3</span>
 
 		<p>Click the button to display the name of Employees(1,2 or 3).</p>
 
-		<button onclick="myFunction()">Click here</button>
+		<button onclick="Function1()">Click here</button>
 
+		<p id="Employ">จะแสดงผลตรงนี้</p>
+		<button onclick="Function2()" id="Button1"> Script 2 </button>
 		<p><strong>Note:</strong> input elements with type="number" are not supported in IE 9 and earlier versions.</p>
-		
-		<p id="Employ"></p>
 
-		<script>
-			function myFunction() {
-			var x = document.getElementById("myNumber").value;
-			var text = '{"employees":[' +
-			'{"firstName":"John","lastName":"Doe" },' +
-			'{"firstName":"Anna","lastName":"Smith" },' +
-			'{"firstName":"Peter","lastName":"Jones" }]}';
-
-			obj = JSON.parse(text);
-			document.getElementById("Employ").innerHTML =
-			obj.employees[x-1].firstName + " " + obj.employees[x-1].lastName;
-			}
-		</script></p>        
+		</p>        
       </div>
     <!---->
 
 	</div>
   </div>
- 
+<p id="Java2"></p>
 <div class="w3-card-4 w3-margin w3-white"><!--Blog-->
   <!-- Blog entry -->
   <div class="w3-container">
     <div class="w3-container">
-      <h3><b>JavaScript#1</b></h3>
+      <h3><b>JavaScript#3</b></h3>
       <h5>ARRAY ,JSON ARRAY ,Button function ,Input Number, <span class="w3-opacity">12/07/2017</span></h5>
     </div>
 
@@ -80,20 +93,7 @@ and is wrapped around the whole page content, except for the footer in this exam
 		<p><strong>Note:</strong> input elements with type="number" are not supported in IE 9 and earlier versions.</p>
 		
 		<p id="Employ2"></p>
-
-		<script>
-			function myFunction() {
-			var x = document.getElementById("myNumber").value;
-			var text = '{"employees":[' +
-			'{"firstName":"John","lastName":"Doe" },' +
-			'{"firstName":"Anna","lastName":"Smith" },' +
-			'{"firstName":"Peter","lastName":"Jones" }]}';
-
-			obj = JSON.parse(text);
-			document.getElementById("Employ2").innerHTML =
-			obj.employees[x-1].firstName + " " + obj.employees[x-1].lastName;
-			}
-		</script></p>        
+		</p>        
       </div>
     <!---->
 
