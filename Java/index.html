@@ -8,33 +8,11 @@
 <!-- Front Style -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <style>
+.buttoncal {text-align: center;padding: 2px 6px;margin: 2px 1px;width: 60px;}
 body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 </style>
-<script>
-			function Function1() {
-			var x = document.getElementById("myNumber").value;
-			var text = '{"employees":[' +
-			'{"firstName":"John","lastName":"Doe" },' +
-			'{"firstName":"Anna","lastName":"Smith" },' +
-			'{"firstName":"Peter","lastName":"Jones" }]}';
-
-			obj = JSON.parse(text);
-			document.getElementById("Employ").innerHTML =
-			obj.employees[x-1].firstName + " " + obj.employees[x-1].lastName;
-			}
-			
-			function Function2() 
-			{
-			document.getElementById("Java2").innerHTML = '<div class="w3-card-4 w3-margin w3-white"><div class="w3-container"><div class="w3-container"><h3><b>JavaScript#2</b></h3><h5>Input HTML Element can input something like this too. <span class="w3-opacity"> [Input HTML Element, Display Element, Hide Element, ##Can repeat(change attribute).]</span></span></h5></div><div class="w3-container"><br><button onclick="Function2a()">Hide</button><p>How it work? 1# When you hide it the attribute of context just change to "none" so if you want it to re appear just change it to "block" or something else, <br>Then it can repeat many time as you want. <br>How it work? 2# Input HTML Element just put context in between id-tag, So i just make empty id-tag and put the whole context between it when click the button, not so good method but easy to manage when use external script.</p><p><strong>Note:</strong> You can use same id-tag to input different context.</p><p id="Outputfield1"></p></div>';
-			document.getElementById('Java2').style.display='block';
-			}
-
-			function Function2a()
-			{
-			document.getElementById('Java2').style.display='none';
-			document.getElementById('Button1').innerHTML='Show Script 2 again';
-			}
-		</script>
+<script src="./js/Javas1a2.js"></script>
+<script src="./js/Calculator.js"></script>
 <body class="w3-light-grey">
 
 <!-- w3-content defines a container for fixed size centered content, 
@@ -52,18 +30,18 @@ and is wrapped around the whole page content, except for the footer in this exam
   <div class="w3-container">
     <div class="w3-container">
       <h3><b>JavaScript#1</b></h3>
-      <h5>ARRAY, JSON ARRAY, Button function, Dynamic output base on Number, Change HTML Element. <span class="w3-opacity"> (5) </span></h5>
+      <h5>Show Employees name.<span class="w3-opacity"> [ARRAY, JSON ARRAY, Output base on Number, Change HTML Element.] </span></h5>
     </div>
 
     <div class="w3-container"><br>
-		<p>ADD Array in JSON Method (John doe, Anna Smith , Peter Jones).</p>
+		<p>ADD Array by JSON Method (John doe, Anna Smith , Peter Jones).</p>
 		<p>Number: <input type="number" id="myNumber" value="1"><span class="w3-opacity">1 , 2 , 3</span>
 
 		<p>Click the button to display the name of Employees(1,2 or 3).</p>
 
 		<button onclick="Function1()">Click here</button>
 
-		<p id="Employ">จะแสดงผลตรงนี้</p>
+		<p id="Employ">Output here</p>
 		<button onclick="Function2()" id="Button1"> Script 2 </button>
 		<p><strong>Note:</strong> input elements with type="number" are not supported in IE 9 and earlier versions.</p>
 
@@ -73,27 +51,70 @@ and is wrapped around the whole page content, except for the footer in this exam
 
 	</div>
   </div>
+  
 <p id="Java2"></p>
+
 <div class="w3-card-4 w3-margin w3-white"><!--Blog-->
   <!-- Blog entry -->
   <div class="w3-container">
     <div class="w3-container">
       <h3><b>JavaScript#3</b></h3>
-      <h5>ARRAY ,JSON ARRAY ,Button function ,Input Number, <span class="w3-opacity">12/07/2017</span></h5>
+      <h5>Simple Calculator. <span class="w3-opacity">[Get value, Calculate, Display, Clear, if.]</span></h5>
     </div>
 
     <div class="w3-container"><br>
-		<p>ADD Array in JSON Method (John doe, Anna Smith , Peter Jones).</p>
-		<p>Number: <input type="number" id="myNumber" value="1">
-
-		<p>Click the button to display the name of Employees(1,2 or 3).</p>
-
-		<button onclick="myFunction()">Click here</button>
-
-		<p><strong>Note:</strong> input elements with type="number" are not supported in IE 9 and earlier versions.</p>
-		
+		<p>When click button it called function depend on button you click, then calculate( + , - , * , / ) then display.<br>
+			<span class="w3-opacity">Example 6+9=15, click 6 show 6 in box set value 6 in memory(or what so ever you call),click + set + in solution, Click 9 [like click 6], Click "=" Calculate and then display.</span> 
+		</p>
+				
 		<p id="Employ2"></p>
-		</p>        
+			<FORM name="Calculator">
+			<table width="70%" ><tr>
+			<td colspan="2" align="center">
+			
+			<b><font size="4">
+			<input type="text" size="40%" maxlength="40" name="Display" onChange="FixCurrent()"></font></b>
+			
+			</td></tr>
+			<tr><td width="40%" align="center">                 
+			
+			<table><tr>
+				<td><input class="buttoncal" type="button" name="seven" value="   7    " OnClick="AddDigit('7')"></td>
+				<td><input class="buttoncal" type="button" name="eight" value="   8    " OnClick="AddDigit('8')"></td>
+				<td><input class="buttoncal" type="button" name="nine" value="   9    " OnClick="AddDigit('9')"></td></tr><tr>
+				<td><input class="buttoncal" type="button" name="four" value="   4    " OnClick="AddDigit('4')"></td>
+				<td><input class="buttoncal" type="button" name="five" value="   5    " OnClick="AddDigit('5')"></td>
+				<td><input class="buttoncal" type="button" name="six" value="   6    " OnClick="AddDigit('6')"></td></tr><tr>
+				<td><input class="buttoncal" type="button" name="one" value="   1    " OnClick="AddDigit('1')"></td>
+				<td><input class="buttoncal" type="button" name="two" value="   2    " OnClick="AddDigit('2')"></td>
+				<td><input class="buttoncal" type="button" name="three" value="   3    " OnClick="AddDigit('3')"></td></tr><tr>
+				<td><input class="buttoncal" type="button" name="plusmin" value="  +/-  " OnClick="PlusMinus()"></td>
+				<td><input class="buttoncal" type="button" name="one" value="   0    " OnClick="AddDigit('0')"></td>
+				<td><input class="buttoncal" type="button" name="two" value="    .    " OnClick="Dot()"></td>
+			</tr>
+			</table>
+			
+			
+			</td>                                   
+			<td width="40%" align="center">                     
+			
+			<table><tr>
+				<td><input class="buttoncal" type="button" name="clear" value="    C     " OnClick="Clear()"></td>
+				<td><input class="buttoncal" type="button" name="AC" value="   AC    " OnClick="AllClear()"></td></tr><tr>
+				<td><input class="buttoncal" type="button" name="mul" value="     *     " OnClick="Operate('*')"></td>
+				<td><input class="buttoncal" type="button" name="div" value="     /      " OnClick="Operate('/')"></td></tr><tr>
+				<td><input class="buttoncal" type="button" name="add" value="    +     " OnClick="Operate('+')"></td>
+				<td><input class="buttoncal" type="button" name="sub" value="     -      " OnClick="Operate('-')"></td></tr><tr>
+				<td><input class="buttoncal" type="button" name="result" value="     =    " OnClick="Calculate()"></td>
+				<td><input class="buttoncal" type="button" name="exp" value="  EXP  " OnClick="DoExponent()"></td>
+			</tr></table>
+			
+			
+			</td>                                  
+			</tr></table>                          
+			</FORM>
+		<p><strong>Note:</strong> if length of digit is too high some time it wont run at all.<span class="w3-opacity"> [but you can fixed max length.]</span></p>
+		</p>
       </div>
     <!---->
 
@@ -111,8 +132,7 @@ and is wrapped around the whole page content, except for the footer in this exam
 
 <!-- Footer -->
 <footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top">
-  <button class="w3-button w3-black w3-disabled w3-padding-large w3-margin-bottom">Previous</button>
-  <button class="w3-button w3-black w3-padding-large w3-margin-bottom">Next »</button>
+  <a href="/index.html" class="w3-button w3-black w3-padding-large w3-margin-bottom">Home</a>
   <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
 </footer>
 
