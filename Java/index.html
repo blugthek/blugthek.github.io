@@ -23,6 +23,7 @@ and is wrapped around the whole page content, except for the footer in this exam
 <header class="w3-container w3-center w3-padding-32"> 
   <h1><b>JAVASCRIPT</b></h1>
 </header>
+<p align="center"><font size="3"><span class="w3-opacity">( More than 10 function )</span></font></p>
 
 <!-- Blog entries -->
 <div class="w3-card-4 w3-margin w3-white">
@@ -30,7 +31,7 @@ and is wrapped around the whole page content, except for the footer in this exam
   <div class="w3-container">
     <div class="w3-container">
       <h3><b>JavaScript#1</b></h3>
-      <h5>Show Employees name.<span class="w3-opacity"> [ARRAY, JSON ARRAY, Output base on Number, Change HTML Element.] </span></h5>
+      <h5>Show Employees name.<span class="w3-opacity"> [Multiple line object, ARRAY, JSON ARRAY, Output base on Number, Change HTML Element.] </span></h5>
     </div>
 
     <div class="w3-container"><br>
@@ -42,7 +43,6 @@ and is wrapped around the whole page content, except for the footer in this exam
 		<button onclick="Function1()">Click here</button>
 
 		<p id="Employ">Output here</p>
-		<button onclick="Function2()" id="Button1"> Script 2 </button>
 		<p><strong>Note:</strong> input elements with type="number" are not supported in IE 9 and earlier versions.</p>
 
 		</p>        
@@ -51,6 +51,26 @@ and is wrapped around the whole page content, except for the footer in this exam
 
 	</div>
   </div>
+
+<div class="w3-card-4 w3-margin w3-white"><!--Blog-->
+  <!-- Blog entry -->
+  <div class="w3-container">
+    <div class="w3-container">
+      <h3><b>JavaScript#2</b></h3>
+    </div>
+
+    <div class="w3-container">
+
+		<p>Click the button .<span class="w3-opacity"> [It will show how it work.] </span></p>
+
+		<button onclick="Function2()" id="Button1"> Script 2 </button>
+		<p><strong>Note:</strong> input elements can input hidden context as well.</p>
+
+	</div>
+    <!---->
+
+	</div>
+  </div><!--End Blog-->
   
 <p id="Java2"></p>
 
@@ -59,15 +79,101 @@ and is wrapped around the whole page content, except for the footer in this exam
   <div class="w3-container">
     <div class="w3-container">
       <h3><b>JavaScript#3</b></h3>
-      <h5>Simple Calculator. <span class="w3-opacity">[Get value, Calculate, Display, Clear, if.]</span></h5>
+	  <h5>Convert Fahrenheit to Celsius<span class="w3-opacity"> [Arithmetic, Get value, Change HTML element.] </span></h5>
     </div>
 
-    <div class="w3-container"><br>
+    <div class="w3-container">
+ 
+		<p>Fahrenheit : <input type="number" id="Fahrenheit" value="1"></p>
+
+		<p>Click to convert fahrenheit to Celsius.</p>
+
+		<button onclick="Function3()">Click here</button>
+
+		<p id="Output2">Output here</p>
+		<p><strong>Note:</strong> Leave input blank will return the function definition instead of the function result.</p>
+
+	</div>
+    <!---->
+
+	</div>
+  </div><!--End Blog-->
+
+<div class="w3-card-4 w3-margin w3-white"><!--Blog-->
+  <!-- Blog entry -->
+  <div class="w3-container">
+    <div class="w3-container">
+      <h3><b>JavaScript#4</b></h3>
+	  <h5>Show hidden HTML element with condition.<span class="w3-opacity"> [Get value, Change HTML Attribute, Condition.] </span></h5>
+    </div>
+
+    <div class="w3-container">
+ 
+		<p>Password : <input type="password" id="password" value="7777" maxlength="8"></p>
+
+		<p><span class="w3-opacity">Password is "11247889"</span></p>
+
+		<button onclick="Function4()">Click here</button>
+
+		<p id="Output3" style="display:none"><button onclick="document.getElementById('Output3').style.display='none'">Hide</button></p>
+		<p><strong>Note:</strong> Maxlength : this attribute specifies the maximum number of characters the user may enter.</p>
+
+	</div>
+    <!---->
+
+	</div>
+  </div><!--End Blog-->
+
+<div class="w3-card-4 w3-margin w3-white"><!--Blog-->
+  <!-- Blog entry -->
+  <div class="w3-container">
+    <div class="w3-container">
+      <h3><b>JavaScript#5</b></h3>
+	  <h5>Change HTML Attribute (Basic and advance).<span class="w3-opacity"> [Get value, Change HTML Attribute.] </span></h5>
+    </div>
+
+    <div class="w3-container">
+ 
+		<p><img src="./img/Wood.jpg" id="image1" width="100%"></p>
+
+		<p><span class="w3-opacity"><a href="https://c.pxhere.com/photos/ed/8e/burnt_charcoal_statue_natural_wood_wooden-739410.jpg!d">IMG SRC</a></span></p>
+		
+		<p><input  type="button"	value="basic +" 	OnClick="document.getElementById('image1').style.width = '110%';">
+		<input  type="button"	value="basic -" 	OnClick="document.getElementById('image1').style.width = '90%';"></p>
+
+		<button onclick="document.getElementById('Hidden1').style.display='block'">Advance</button>
+			
+			<table width="80%" id="Hidden1" style="display:none">
+				<tr align="center">
+				<td colspan="2"><b>Change Img, border, radius size</b></td></tr><tr>
+				<td colspan="2"><input type="text" id="imgvalue" size="20%"></td></tr><tr>
+				<td><input style="width: 180px" type="button"	value="Size" 	OnClick="Incimg('Submit')"></td></tr><tr>
+				<td><input style="width: 180px" type="button" 	value="Border Size" 	OnClick="Incimg('ChangeB')"></td></tr><tr>
+				<td><input style="width: 180px" type="button" 	value="Border Radius" 	OnClick="Incimg('ChangeR')"></td></tr>
+			</table>
+		<p><strong>Note:</strong> You can change any CSS style as you want as well but <b>please note</b> for responsive web view<font color="red"> USE " % (percent)".</font></p>
+
+	</div>
+    <!---->
+
+	</div>
+  </div><!--End Blog-->
+
+<div class="w3-card-4 w3-margin w3-white"><!--Blog-->
+  <!-- Blog entry -->
+  <div class="w3-container">
+    <div class="w3-container">
+      <h3><b>JavaScript#6</b></h3>
+      <h5>Simple Calculator. <span class="w3-opacity">[Arithmetic, Get value, Calculate, Display, Clear, Condition, Form, ETC.]</span></h5>
+    </div>
+
+    <div class="w3-container">
 		<p>When click button it called function depend on button you click, then calculate( + , - , * , / ) then display.<br>
-			<span class="w3-opacity">Example 6+9=15, click 6 show 6 in box set value 6 in memory(or what so ever you call),click + set + in solution, Click 9 [like click 6], Click "=" Calculate and then display.</span> 
+			<span class="w3-opacity">Example 6+9=15<br>Click 6 show 6 in box set value 6 in memory(or what so ever you calls)
+				<br>Click "+" Call operate function ('+') [ 6 + "current" ]
+				<br>Click 9 ##like click 6## [ 6 + 9 ]
+				<br>Click "=" Calculate and then display (15).</span> 
 		</p>
-				
-		<p id="Employ2"></p>
 			<FORM name="Calculator">
 			<table width="70%" ><tr>
 			<td colspan="2" align="center">
@@ -79,18 +185,18 @@ and is wrapped around the whole page content, except for the footer in this exam
 			<tr><td width="40%" align="center">                 
 			
 			<table><tr>
-				<td><input class="buttoncal" type="button" name="seven" value="   7    " OnClick="AddDigit('7')"></td>
-				<td><input class="buttoncal" type="button" name="eight" value="   8    " OnClick="AddDigit('8')"></td>
-				<td><input class="buttoncal" type="button" name="nine" value="   9    " OnClick="AddDigit('9')"></td></tr><tr>
-				<td><input class="buttoncal" type="button" name="four" value="   4    " OnClick="AddDigit('4')"></td>
-				<td><input class="buttoncal" type="button" name="five" value="   5    " OnClick="AddDigit('5')"></td>
-				<td><input class="buttoncal" type="button" name="six" value="   6    " OnClick="AddDigit('6')"></td></tr><tr>
-				<td><input class="buttoncal" type="button" name="one" value="   1    " OnClick="AddDigit('1')"></td>
-				<td><input class="buttoncal" type="button" name="two" value="   2    " OnClick="AddDigit('2')"></td>
-				<td><input class="buttoncal" type="button" name="three" value="   3    " OnClick="AddDigit('3')"></td></tr><tr>
-				<td><input class="buttoncal" type="button" name="plusmin" value="  +/-  " OnClick="PlusMinus()"></td>
-				<td><input class="buttoncal" type="button" name="one" value="   0    " OnClick="AddDigit('0')"></td>
-				<td><input class="buttoncal" type="button" name="two" value="    .    " OnClick="Dot()"></td>
+				<td><input class="buttoncal" type="button" name="seven" 	value="7" 	OnClick="AddDigit('7')"></td>
+				<td><input class="buttoncal" type="button" name="eight" 	value="8" 	OnClick="AddDigit('8')"></td>
+				<td><input class="buttoncal" type="button" name="nine" 		value="9" 	OnClick="AddDigit('9')"></td></tr><tr>
+				<td><input class="buttoncal" type="button" name="four" 		value="4" 	OnClick="AddDigit('4')"></td>
+				<td><input class="buttoncal" type="button" name="five" 		value="5" 	OnClick="AddDigit('5')"></td>
+				<td><input class="buttoncal" type="button" name="six"		value="6" 	OnClick="AddDigit('6')"></td></tr><tr>
+				<td><input class="buttoncal" type="button" name="one" 		value="1" 	OnClick="AddDigit('1')"></td>
+				<td><input class="buttoncal" type="button" name="two" 		value="2" 	OnClick="AddDigit('2')"></td>
+				<td><input class="buttoncal" type="button" name="three" 	value="3" 	OnClick="AddDigit('3')"></td></tr><tr>
+				<td><input class="buttoncal" type="button" name="plusmin" 	value="+/-" OnClick="PlusMinus()"></td>
+				<td><input class="buttoncal" type="button" name="one" 		value="0" 	OnClick="AddDigit('0')"></td>
+				<td><input class="buttoncal" type="button" name="two" 		value="." 	OnClick="Dot()"></td>
 			</tr>
 			</table>
 			
@@ -99,27 +205,27 @@ and is wrapped around the whole page content, except for the footer in this exam
 			<td width="40%" align="center">                     
 			
 			<table><tr>
-				<td><input class="buttoncal" type="button" name="clear" value="    C     " OnClick="Clear()"></td>
-				<td><input class="buttoncal" type="button" name="AC" value="   AC    " OnClick="AllClear()"></td></tr><tr>
-				<td><input class="buttoncal" type="button" name="mul" value="     *     " OnClick="Operate('*')"></td>
-				<td><input class="buttoncal" type="button" name="div" value="     /      " OnClick="Operate('/')"></td></tr><tr>
-				<td><input class="buttoncal" type="button" name="add" value="    +     " OnClick="Operate('+')"></td>
-				<td><input class="buttoncal" type="button" name="sub" value="     -      " OnClick="Operate('-')"></td></tr><tr>
-				<td><input class="buttoncal" type="button" name="result" value="     =    " OnClick="Calculate()"></td>
-				<td><input class="buttoncal" type="button" name="exp" value="  EXP  " OnClick="DoExponent()"></td>
+				<td><input class="buttoncal" type="button" name="clear" 	value="C" 	OnClick="Clear()"></td>
+				<td><input class="buttoncal" type="button" name="AC" 		value="AC" 	OnClick="AllClear()"></td></tr><tr>
+				<td><input class="buttoncal" type="button" name="mul" 		value="*" 	OnClick="Operate('*')"></td>
+				<td><input class="buttoncal" type="button" name="div" 		value="/" 	OnClick="Operate('/')"></td></tr><tr>
+				<td><input class="buttoncal" type="button" name="add" 		value="+" 	OnClick="Operate('+')"></td>
+				<td><input class="buttoncal" type="button" name="sub" 		value="-" 	OnClick="Operate('-')"></td></tr><tr>
+				<td><input class="buttoncal" type="button" name="result" 	value="=" 	OnClick="Calculate()"></td>
+				<td><input class="buttoncal" type="button" name="exp" 		value="EXP" OnClick="DoExponent()"></td>
 			</tr></table>
 			
 			
 			</td>                                  
 			</tr></table>                          
 			</FORM>
-		<p><strong>Note:</strong> if length of digit is too high some time it wont run at all.<span class="w3-opacity"> [but you can fixed max length.]</span></p>
+		<p><strong>Note:</strong> if length of digit is too high some time it wont run at all.<span class="w3-opacity"> [but you can change max length.]</span></p>
+		<p><font color="red"> >>>>9 Function in calculator.(Not plain function like show, etc)<<<< </font></p>
 		</p>
       </div>
     <!---->
 
 	</div>
-  </div>
  
 <!-- END Introduction Menu -->
 </div>
